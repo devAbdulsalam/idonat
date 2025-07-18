@@ -1,59 +1,121 @@
-# `idonat`
+# 🩸 iDonat – Save Lives. Get Rewarded.
 
-Welcome to your new `idonat` project and to the Internet Computer development community. By default, creating a new project adds this README and some template files to your project directory. You can edit these template files to customize your project and to include your own code to speed up the development cycle.
+iDonat is a decentralized blood donation and emergency medical response platform built on the Internet Computer (ICP). It connects donors, hospitals, and patients in real-time using AI-powered smart matching, blockchain security, and community-driven rewards.
 
-To get started, you might want to explore the project directory structure and the default configuration file. Working with this project in your development environment will not affect any production deployment or identity tokens.
+This project is inspired by the urgent need for timely blood donations and faster emergency response in Nigeria and other underserved regions.
 
-To learn more before you start working with `idonat`, see the following documentation available online:
+## 🚀 Features
 
-- [Quick Start](https://internetcomputer.org/docs/current/developer-docs/setup/deploy-locally)
-- [SDK Developer Tools](https://internetcomputer.org/docs/current/developer-docs/setup/install)
-- [Motoko Programming Language Guide](https://internetcomputer.org/docs/current/motoko/main/motoko)
-- [Motoko Language Quick Reference](https://internetcomputer.org/docs/current/motoko/main/language-manual)
+✅ Smart Donor Matching
+AI connects hospitals with the closest, most suitable donors based on blood type, availability, and urgency.
 
-If you want to start working on your project right away, you might want to try the following commands:
+✅ Real-Time Emergency Alerts
+Hospitals can send verified, location-based alerts to potential donors during critical shortages.
+
+✅ Donor Dashboard
+Track your donation history, eligibility status, and impact in lives saved.
+
+✅ Rewards System
+Earn \$LBT tokens for every successful donation. Redeem tokens for health benefits, discounts, or local services.
+
+✅ Leaderboard & Community
+Top donors are recognized publicly. Teams and blood drives can compete to encourage consistent participation.
+
+✅ Secure & Decentralized
+Built on ICP using Motoko. Health data is private, encrypted, and stored in tamper-proof canisters.
+
+✅ Multilingual & Localized
+Supports major Nigerian languages (e.g., Hausa, Yoruba, Igbo) with voice support for non-literate users.
+
+✅ AI Assistant
+Get first-aid triage advice, donation reminders, health tips, and motivational nudges from a built-in chatbot.
+
+---
+
+## 💡 Why iDonat?
+
+Every year, thousands die in Nigeria due to lack of timely blood access. iDonat empowers local communities to respond faster using secure tech and human compassion. It’s a life-saving tool for individuals, hospitals, and public health ecosystems.
+
+---
+
+## ⚙️ Architecture Overview
+
+* Frontend: React + Tailwind CSS
+* Backend: Motoko (canisters on Internet Computer)
+* AI Modules: TensorFlow\.js / Edge GPT (via plug-in)
+* Blockchain: Internet Identity for authentication & token rewards
+* APIs: Location, hospital registry, emergency status sync
+
+---
+
+## 🛠️ Installation (MVP Dev Environment)
+
+1. Clone the repo:
 
 ```bash
-cd idonat/
-dfx help
-dfx canister --help
+git clone https://github.com/yourorg/idonat.git
+cd idonat
 ```
 
-## Running the project locally
-
-If you want to test your project locally, you can use the following commands:
+2. Install frontend dependencies:
 
 ```bash
-# Starts the replica, running in the background
-dfx start --background
+cd frontend
+npm install
+npm run dev
+```
 
-# Deploys your canisters to the replica and generates your candid interface
+3. Start Motoko backend:
+
+```bash
+dfx start --background
 dfx deploy
 ```
 
-Once the job completes, your application will be available at `http://localhost:4943?canisterId={asset_canister_id}`.
+4. Visit app at: [http://localhost:5173](http://localhost:5173)
 
-If you have made changes to your backend canister, you can generate a new candid interface with
+(Replace with real port and URL once hosted on ICP)
 
-```bash
-npm run generate
-```
+---
 
-at any time. This is recommended before starting the frontend development server, and will be run automatically any time you run `dfx deploy`.
+## 📈 Roadmap
 
-If you are making frontend changes, you can start a development server with
+* [x] UI Wireframe & Token Design
+* [x] Smart Alert + Donor Matching
+* [x] Emergency Request System (Hospital Portal)
+* [ ] ICP Identity & Encrypted Donor Profile
+* [ ] Tokenomics + Redeem Marketplace
+* [ ] Mobile Version (React Native)
+* [ ] NLP-powered Multilingual AI Assistant
+* [ ] Nationwide Pilot Deployment in Nigeria
 
-```bash
-npm start
-```
+---
 
-Which will start a server at `http://localhost:8080`, proxying API requests to the replica at port 4943.
+## 🤝 Contributing
 
-### Note on frontend environment variables
+We welcome contributions from developers, designers, and medics.
 
-If you are hosting frontend code somewhere without using DFX, you may need to make one of the following adjustments to ensure your project does not fetch the root key in production:
+* Fork the repo
+* Create a new branch
+* Submit a pull request with clear description
 
-- set`DFX_NETWORK` to `ic` if you are using Webpack
-- use your own preferred method to replace `process.env.DFX_NETWORK` in the autogenerated declarations
-  - Setting `canisters -> {asset_canister_id} -> declarations -> env_override to a string` in `dfx.json` will replace `process.env.DFX_NETWORK` with the string in the autogenerated declarations
-- Write your own `createActor` constructor
+If you're a hospital or health worker and want to pilot iDonat, reach out via email or Issues tab.
+
+---
+
+## 📜 License
+
+MIT License (or customized dual open-source + nonprofit license)
+See LICENSE file for details.
+
+---
+
+## 🌍 Contact & Community
+
+Website: [https://idonat.org](https://idonat.org) (Coming Soon)
+Email: [hello@idonat.org](mailto:hello@idonat.org)
+Twitter: @iDonatAfrica
+Telegram: [https://t.me/idonat\_support](https://t.me/idonat_support)
+Slack (dev team): \[Invite Link]
+
+Let’s build a future where no life is lost for lack of blood.
