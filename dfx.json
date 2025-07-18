@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "idonat_backend": {
+      "main": "src/idonat_backend/main.mo",
+      "type": "motoko"
+    },
+    "idonat_frontend": {
+      "dependencies": [
+        "idonat_backend"
+      ],
+      "source": [
+        "src/idonat_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "idonat_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
